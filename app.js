@@ -1,28 +1,22 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      number: 10,
-      inputValue: "",
-      confirmedName: "",
+      alertMessage: "hello my name is Cristiano Ronaldo",
+      keydownMessage: "",
+      keydownOutput: "",
     };
   },
   methods: {
-    setConfirmedName() {
-      this.confirmedName = this.inputValue;
+    showAlert() {
+      alert(this.alertMessage);
     },
-
-    setName(event, fname) {
-      // event.preventDefault();
-      this.inputValue = event.target.value + " " + fname;
+    handleKeydownInput(e) {
+      this.keydownMessage = e.target.value;
     },
-    add(num) {
-      this.counter += num;
-    },
-    reduce(num) {
-      this.counter -= num;
+    handlekeyOutput() {
+      this.keydownOutput = this.keydownMessage;
     },
   },
 });
 
-app.mount("#events");
+app.mount("#assignment");
