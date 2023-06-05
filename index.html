@@ -20,6 +20,7 @@
       <h2>Events in Action</h2>
       <button @click="add(number)">Add {{number}}</button>
       <button @click="reduce(number)">Reduce {{number}}</button>
+      <p v-once>first value: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
       <input
         type="text"
