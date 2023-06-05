@@ -3,9 +3,13 @@ const app = Vue.createApp({
     return {
       counter: 0,
       number: 10,
+      inputValue: "",
     };
   },
   methods: {
+    setName(e) {
+      this.inputValue = e.target.value;
+    },
     add(num) {
       this.counter += num;
     },
