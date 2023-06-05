@@ -21,8 +21,12 @@
       <button @click="add(number)">Add {{number}}</button>
       <button @click="reduce(number)">Reduce {{number}}</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" :input="setName" />
-      <p>your name is {{inputValue}}</p>
+      <input
+        type="text"
+        @input="setName($event, 'Elias')"
+        @keyup.enter="setConfirmedName"
+      />
+      <p>your name is {{confirmedName}}</p>
     </section>
   </body>
 </html>
