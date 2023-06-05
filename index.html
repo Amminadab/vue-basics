@@ -30,7 +30,7 @@
       <p>{{keydownOutput}}</p>
       <hr />
       <!-- 3) Repeat 2) but only output the entered value if the ENTER key was pressed -->
-      <input type="text" />
+      <input type="text" type="text" @input="handleKeydownInput" />
       <p>{{keydownMessage}}</p>
     </section>
   </body>
