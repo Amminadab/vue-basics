@@ -18,8 +18,8 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button @click="add">Add</button>
-      <button @click="reduce">Reduse</button>
+      <button @click="add(number)">Add {{number}}</button>
+      <button @click="reduce(number)">Reduce {{number}}</button>
       <p>Result: {{ counter }}</p>
     </section>
   </body>
