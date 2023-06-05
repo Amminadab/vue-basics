@@ -1,22 +1,25 @@
-const App = Vue.createApp({
+const app = Vue.createApp({
   data() {
     return {
-      vueLink: "www.amminadab.com",
-      courseGoal: "Finish these course",
-      courseGoalA: "don't learn angular use react",
-      courseGoalB: "learn Vue",
+      name: "Amminadab",
+      age: 22,
+      img: "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Mercedes-Benz-G-Class/6607/front-left-side-47.jpg?imwidth=210&impolicy=resize",
+      inputValue: "",
     };
   },
   methods: {
-    outputGoal() {
+    ageInFiveYears() {
+      return 5 + this.age;
+    },
+    favoriteNumber() {
       const randomNumber = Math.random();
-      if (randomNumber < 0.5) {
-        return this.courseGoalA;
+      if (randomNumber > 0.5) {
+        return 1;
       } else {
-        return this.courseGoalB;
+        return 0;
       }
     },
   },
 });
 
-App.mount("#user-goal");
+app.mount("#assignment");
