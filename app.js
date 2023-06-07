@@ -32,6 +32,7 @@ const app = Vue.createApp({
     //     this.fullName = this.name + " " + value;
     //   }
     // },
+    //
   },
   methods: {
     outputFullName() {
