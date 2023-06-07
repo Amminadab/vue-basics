@@ -4,6 +4,7 @@ const app = Vue.createApp({
       alertMessage: "hello my name is Cristiano Ronaldo",
       keydownMessage: "",
       keydownOutput: "",
+      name: "",
     };
   },
   methods: {
@@ -15,6 +16,12 @@ const app = Vue.createApp({
     },
     handlekeyOutput() {
       this.keydownOutput = this.keydownMessage;
+    },
+    setName(e) {
+      this.name = e.target.value;
+    },
+    resetName() {
+      this.name = "";
     },
   },
 });
