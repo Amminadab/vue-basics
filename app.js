@@ -7,7 +7,21 @@ const app = Vue.createApp({
       name: "",
     };
   },
+  computed: {
+    fullName() {
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "Elias";
+    },
+  },
   methods: {
+    outputFullName() {
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "Elias";
+    },
     showAlert() {
       alert(this.alertMessage);
     },
