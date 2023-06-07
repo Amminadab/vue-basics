@@ -5,15 +5,33 @@ const app = Vue.createApp({
       keydownMessage: "",
       keydownOutput: "",
       name: "",
+      fathersName: "",
+      // fullName: "",
     };
   },
   computed: {
     fullName() {
-      if (this.name === "") {
+      if (this.name === "" && this.fathersName === "") {
         return "";
       }
-      return this.name + " " + "Elias";
+      return this.name + " " + this.fathersName;
     },
+  },
+  watch: {
+    // name(value) {
+    //   if (value === "") {
+    //     this.fullName = "";
+    //   } else {
+    //     this.fullName = value + " " + this.fathersName;
+    //   }
+    // },
+    // fathersName(value) {
+    //   if (value === "") {
+    //     this.fullName = "";
+    //   } else {
+    //     this.fullName = this.name + " " + value;
+    //   }
+    // },
   },
   methods: {
     outputFullName() {
